@@ -9,3 +9,5 @@ Auf dem Main geht alles Einwandfrei und die Änderungen werden sepperat gemacht,
 
 ## Merge-Strategie
 Die Merge Strategie die ich benutzen werde sind folgende. Alle Änderungen die ich machen werden, müssen mit einem Pull Request durchgeführt werden. Ich werde die Änderungen Mergen oder alternativ Rebasen. Wenn ich Teile vom Code Ändere bzw. etwas hinzufüge, muss ein Teammitglied mit mir ein Code Review machen(den Code überprüfen), dass alles stimmt. Wenn das Code Review durchgeführt worden ist, geht der Code ins Testing. Hat alles funktioniert, kann der Code gemerged werden. 
+
+Hier kommst du zum [Contributing](CONTRIBUTING.md)
