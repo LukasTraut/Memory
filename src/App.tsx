@@ -1,7 +1,15 @@
-import './styles.css';
 
-const App: React.FC = () => {
-    return null;
-};
+import './styles.css'
 
-export default App;
+function App() {
+
+    return (
+        <>
+            <div className="App">
+                <h1>Memory: The Game</h1>
+            </div>
+        </>
+    )
+}
+
+export default App
