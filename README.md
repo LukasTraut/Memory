@@ -15,6 +15,6 @@ Hier kommst du zum [Contributing](CONTRIBUTING.md)
 ## Setup
 Dieses Projekt wird mit React/ Typescript programmiert.
 Es hat eine ESLint und eine Prettier Konfiguration.
-Das gitignore File findet man in dem .idea Ordner
+Das gitignore File findet man im Root Verzeichnis
 
 ## Ausführung
