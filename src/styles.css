@@ -1,0 +1,12 @@
+.App {
+    text-align: center;
+}
+
+header, footer {
+    background-color: cornflowerblue;
+    padding: 20px;
+}
+h1 {
+    text-align: center;
+}
+
