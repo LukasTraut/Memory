@@ -18,14 +18,17 @@ Es hat eine ESLint und eine Prettier Konfiguration.
 Das gitignore File findet man im Root Verzeichnis
 
 ## Ausführung
-### npm run dev
+`npm run dev`:
 Mit diesem Befehl geht die Webseite in den Watch-Modus und reflektiert sofort die Änderungen am Code.
 
-### npm run build
+`npm run build`:
 Mit diesem Befehl bereitet man den Code für die Produktion vor, indem man ihn optimiert.
 
-### npm run lint
+`npm run lint`:
 Mit diesem Befehl überprüft man den Code auf Fehler und potenzielle Bugs.
 
-### npm run preview
-Mit diesem Befehl startet man einen lokalen Webserver, um die produktionsfertige Version der Anwendung zu testen.
+ `npm run preview`: 
+ Mit diesem Befehl startet man einen lokalen Webserver, um die produktionsfertige Version der Anwendung zu testen.
+
+`npm run deploy`: 
+Mit diesem Befehl wird die Webseite automatisch auf GitHub Pages veröffentlicht, indem der Inhalt des `dist`-Ordners hochgeladen wird.
