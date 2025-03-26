@@ -4,8 +4,10 @@ function App() {
 
     return (
         <>
-            <header>
+            <head>
                 <title>Memory: The Game</title>
+            </head>
+            <header>
                 <h1>Memory: The Game</h1>
             </header>
             <div className="App">
