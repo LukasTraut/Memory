@@ -32,3 +32,6 @@ Mit diesem Befehl überprüft man den Code auf Fehler und potenzielle Bugs.
 
 `npm run deploy`: 
 Mit diesem Befehl wird die Webseite automatisch auf GitHub Pages veröffentlicht, indem der Inhalt des `dist`-Ordners hochgeladen wird.
+
+## Link zur Webseite
+https://lukastraut.github.io/Memory/
