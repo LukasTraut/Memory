@@ -1,34 +1,31 @@
 body {
-  font-family: "Roboto", sans-serif;
-  text-align: center;
-  margin: 0;
-  padding-bottom: 60px; /* Platz für den Footer */
+    font-family: 'Roboto', sans-serif;
+    text-align: center;
+    margin: 0;
+    padding-bottom: 60px; /* Platz für den Footer */
 }
 
 .table-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-top: 90px;
-  width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+    width: 100%;
 }
 
 .memory-table {
-  border-collapse: collapse;
-  width: 50%;
+    border-collapse: collapse;
+    width: 50%;
+    margin: auto;
+    border: 2px solid #000;
 }
 
-.memory-table td,
+.memory-table th, .memory-table td {
+    border: 1px solid #000;
+    padding: 10px;
+    text-align: center;
+}
+
 .memory-table th {
-  width: 350px;
-  height: 350px;
-  border: 1px solid #000;
-  padding: 10px;
-  text-align: center;
-  vertical-align: middle;
-}
-
-.memory-table img {
-  max-width: 250px;
-  max-height: 250px;
+    background-color: #f2f2f2;
 }
