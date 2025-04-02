@@ -1,16 +1,19 @@
 
 import './styles.css'
+import MemoryTable from './components/MemoryTable';
 
 function App() {
 
     return (
         <>
-            <header>
+            <head>
                 <title>Memory: The Game</title>
+            </head>
+            <header>
                 <h1>Memory: The Game</h1>
             </header>
             <div className="App">
-                <p>Body, hier ist das Memory</p>
+                <MemoryTable initialColumns={4} initialRows={4} />
             </div>
             <footer>
                 <p>Memory: The Game created by Lukas Traut</p>
