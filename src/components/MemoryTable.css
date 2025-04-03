@@ -9,7 +9,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 50px;
+    margin-top: 90px;
     width: 100%;
 }
 
@@ -20,12 +20,8 @@ body {
     border: 2px solid #000;
 }
 
-.memory-table th, .memory-table td {
+.memory-table td {
     border: 1px solid #000;
     padding: 10px;
     text-align: center;
-}
-
-.memory-table th {
-    background-color: #f2f2f2;
 }
