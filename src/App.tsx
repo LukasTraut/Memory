@@ -13,7 +13,7 @@ function App() {
                 <h1>Memory: The Game</h1>
             </header>
             <div className="App">
-                <MemoryTable initialColumns={4} initialRows={4} />
+                <MemoryTable initialColumns={6} initialRows={4} />
             </div>
             <footer>
                 <p>Memory: The Game created by Lukas Traut</p>
