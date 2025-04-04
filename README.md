@@ -16,6 +16,7 @@ Die Merge Strategie die ich benutzen werde sind folgende. Alle Änderungen die i
 Hier kommst du zum [Contributing](CONTRIBUTING.md)
 
 ## Setup
+
 Dieses Projekt wird mit React/ Typescript programmiert.
 Es hat eine ESLint und eine Prettier Konfiguration.
 Das gitignore File findet man im Root Verzeichnis
