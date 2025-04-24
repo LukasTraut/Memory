@@ -43,36 +43,47 @@ function shuffle(array: number[]): number[] {
 const citynumbers = shuffle([0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11  ]);
 console.log("names", JSON.stringify(citynumbers));
 
-const imageUrlnumbers = shuffle([0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11  ]);
-console.log("names", JSON.stringify(imageUrlnumbers));
+const imageUrlnumbers = shuffle([0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11]);
+console.log("bild", JSON.stringify(imageUrlnumbers));
 
 const CreateCard = (props: {index:number}) => {
-console.log("render")
+  console.log("render");
   const city = Cities[citynumbers[props.index]];
   const imageUrl = images[imageUrlnumbers[props.index]];
-console.log(citynumbers.length, props.index)
-  console.log(imageUrlnumbers.length, props.index)
-  if (!usedNames.has(city)) {
-    usedNames.add(city);
 
-    return (
-        <div>
-          {props.index}
-          <h2>{city}</h2>
-        </div>
-    );
-  }
+  console.log("city:", city);
+  console.log("imageUrl:", imageUrl);
+
+  console.log(citynumbers.length, props.index);
+  console.log(imageUrlnumbers.length, props.index);
+
+    if (!usedNames.has(city) && props.index < citynumbers.length) {
+      usedNames.add(city);
+      return (
+          <div>
+            {props.index}
+            <h2>{city}</h2>
+          </div>
+      );
+  } else if ((props.index - 12) < imageUrlnumbers.length) {
+
+    const imageIndex = props.index - 12;
+    const imageUrl = images[imageUrlnumbers[imageIndex]];
+
     if (!usedUrls.has(imageUrl)) {
-    usedUrls.add(imageUrl);
-
-    return (
-        <div>
-          {props.index}
-          <img src={imageUrl} alt={city}/>
-        </div>
-    );
+      usedUrls.add(imageUrl);
+      return (
+          <div>
+            {props.index}
+            <img src={imageUrl} alt={city}/>
+          </div>
+      );
+    }
   }
-  // }
+
+  return null;
+
+// }
   //
   // const imagenumbers = shuffle([0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11]);
   // console.log("names", JSON.stringify(imagenumbers));
