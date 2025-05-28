@@ -20,7 +20,8 @@ body {
   border: 2px solid #000;
 }
 
-.memory-table td, .memory-table th{
+.memory-table td,
+.memory-table th {
   width: 350px;
   height: 350px;
   border: 1px solid #000;
@@ -30,6 +31,6 @@ body {
 }
 
 .memory-table img {
-   max-width: 250px;
-   max-height: 250px;
+  max-width: 250px;
+  max-height: 250px;
 }
