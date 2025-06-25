@@ -7,17 +7,20 @@ header {
   padding: 20px;
   font-family: "Verdana", sans-serif;
   text-align: center;
+  height: 10%;
 }
 
 body {
   font-family: "Roboto", sans-serif;
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  margin: 0;
 }
 
 footer {
-  position: fixed;
-  bottom: 0;
-  width: 95%;
+  margin-top: 100px;
   background-color: royalblue;
   padding: 20px;
   text-align: center;

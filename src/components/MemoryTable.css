@@ -16,8 +16,6 @@ body {
 .memory-table {
   border-collapse: collapse;
   width: 50%;
-  margin: auto;
-  border: 2px solid #000;
 }
 
 .memory-table td,
@@ -34,3 +32,4 @@ body {
   max-width: 250px;
   max-height: 250px;
 }
+
