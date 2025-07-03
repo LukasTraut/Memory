@@ -16,11 +16,13 @@ Die Merge Strategie die ich benutzen werde sind folgende. Alle Änderungen die i
 Hier kommst du zum [Contributing](CONTRIBUTING.md)
 
 ## Setup
+
 Dieses Projekt wird mit React/ Typescript programmiert.
 Es hat eine ESLint und eine Prettier Konfiguration.
 Das gitignore File findet man im Root Verzeichnis
 
 ## Ausführung
+
 `npm run dev`:
 Mit diesem Befehl geht die Webseite in den Watch-Modus und reflektiert sofort die Änderungen am Code.
 
@@ -37,4 +39,5 @@ Mit diesem Befehl startet man einen lokalen Webserver, um die produktionsfertige
 Mit diesem Befehl wird die Webseite automatisch auf GitHub Pages veröffentlicht, indem der Inhalt des `dist`-Ordners hochgeladen wird.
 
 ## Link zur Webseite
+
 https://lukastraut.github.io/Memory/

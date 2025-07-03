@@ -1,5 +1,5 @@
 import "./MemoryTable.css";
-import CreateCard from "./MemoryKarte";
+import MemoryCard from "./MemoryKarte";
 import { useState } from "react";
 
 const MemoryTable = ({
@@ -29,7 +29,7 @@ const MemoryTable = ({
                   }
                 >
                   {rowIndex} / {colIndex}
-                  <CreateCard
+                  <MemoryCard
                     index={rowIndex * initialColumns + colIndex}
                     lastClickedIndex={lastClickedCardIndex}
                   />
