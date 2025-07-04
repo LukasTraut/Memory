@@ -44,61 +44,66 @@ Cities.forEach((city, index) => {
   console.log(`Index: ${index}, Element: ${city}`);
 });
 
-let turn = 0;
+let lastClicked: { index: number; value: number; flipBack: () => void } | null = null;
+
+const MemoryCard = ({ index }: { index: number }) => {  const [isClicked, setIsClicked] = useState(false);
+  const [isMatched, setIsMatched] = useState(false);
+
+  const pickIndex = indexes[index];
+  const stringindex = Cities[pickIndex];
 
 
-const CreateCard = (props: { index: number; lastClickedIndex: number }) => {
-  const [isClicked, setIsClicked] = useState(false);
-  // let firstCard: { setClicked: (value: boolean) => false; index: number};
-
-  const pickIndex = props.index;
-  const stringindex = Cities[indexes[pickIndex]];
+  const flipBack = () => setIsClicked(false);
 
   const handleClick = () => {
+
     setIsClicked(true);
-    // firstCard.setClicked(true)
-    //   firstCard.index = props.lastClickedIndex
 
-    const savedElement = {
-      index: indexes[pickIndex],
-      element: stringindex,
-    };
-
-    if (turn === 0) {
-      turn = 1;
+    if (!lastClicked) {
+      lastClicked = { index, value: pickIndex, flipBack };
     } else {
-      if (
-        (savedElement.index < 12 &&
-          savedElement.index + 12 === indexes[props.lastClickedIndex]) ||
-        (savedElement.index >= 12 &&
-          savedElement.index - 12 === indexes[props.lastClickedIndex])
-      ) {
+
+      const isMatch =
+        (pickIndex < 12 && pickIndex + 12 === lastClicked.value) ||
+        (pickIndex >= 12 && pickIndex - 12 === lastClicked.value);
+
+
+      if (isMatch) {
+        setIsMatched(true);
         setTimeout(() => {
           alert("Its a Match");
           console.log("Its a Match");
-          turn = 0;
-        }, 20);
+          lastClicked = null;
+        }, 500);
       } else {
         setTimeout(() => {
-          alert("Its not a Match");
-          console.log("Its not a Match");
-          turn = 0;
+          alert("It's not a Match");
+          console.log("It's not a Match");
           setIsClicked(false);
-          // firstCard.setClicked(false);
-        }, 20);
+          lastClicked?.flipBack();
+          lastClicked = null;
+        }, 1000);
+
       }
     }
   };
 
+
   return (
-    <div onClick={handleClick}>
-      {isClicked ? (
-        <img src={stringindex} alt={stringindex} />
-      ) : (
-        <img src="https://www.crowdify.net/media/projects/6362/news/9877_detail.webp?m=1558343507" />
-      )}
+    <div
+      onClick={handleClick}
+    >
+      <img
+        src={
+          isClicked || isMatched
+            ? stringindex
+            : "https://www.crowdify.net/media/projects/6362/news/9877_detail.webp?m=1558343507"
+        }
+        alt={stringindex}
+
+      />
     </div>
   );
 };
 
-export default CreateCard;
+export default MemoryCard;
