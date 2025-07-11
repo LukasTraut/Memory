@@ -1,10 +1,7 @@
 {
-  "compilerOptions": {
-    "target": "es5",
-    "lib": ["dom", "esnext"],
-    "jsx": "react-jsx",
-    "moduleResolution": "node",
-    "strict": true
-  },
-  "include": ["src"]
+  "files": [],
+  "references": [
+    { "path": "./tsconfig.app.json" },
+    { "path": "./tsconfig.node.json" }
+  ]
 }
