@@ -46,12 +46,19 @@ Cities.forEach((city, index) => {
 
 let lastClicked: { index: number; value: number; flipBack: () => void } | null = null;
 
-const MemoryCard = ({ index }: { index: number }) => {  const [isClicked, setIsClicked] = useState(false);
+type MemoryCardProps = {
+  index: number;
+  lastClickedIndex: number;
+};
+
+const MemoryCard = ({ index, lastClickedIndex }: MemoryCardProps) => {
+ const [isClicked, setIsClicked] = useState(false);
   const [isMatched, setIsMatched] = useState(false);
 
   const pickIndex = indexes[index];
   const stringindex = Cities[pickIndex];
 
+  console.log(lastClickedIndex)
 
   const flipBack = () => setIsClicked(false);
 

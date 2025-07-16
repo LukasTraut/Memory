@@ -10,7 +10,7 @@ function App() {
         <h1>Memory: The Game</h1>
       </header>
       <div className="App">
-        <p>Body, hier ist das Memory</p>
+        <p>Body, hi</p>
       </div>
       <footer>
         <p>Memory: The Game created by Lukas Traut</p>
