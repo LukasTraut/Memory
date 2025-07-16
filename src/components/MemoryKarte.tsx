@@ -53,7 +53,7 @@ type MemoryCardProps = {
 
 const MemoryCard = ({ index, lastClickedIndex }: MemoryCardProps) => {
  const [isClicked, setIsClicked] = useState(false);
-  const [isMatched, setIsMatched] = useState(false);
+  const [isFirstCard, setIsFirstCard] = useState(false);
 
   const pickIndex = indexes[index];
   const stringindex = Cities[pickIndex];
@@ -76,7 +76,7 @@ const MemoryCard = ({ index, lastClickedIndex }: MemoryCardProps) => {
 
 
       if (isMatch) {
-        setIsMatched(true);
+        setIsFirstCard(true);
         setTimeout(() => {
           alert("Its a Match");
           console.log("Its a Match");
@@ -102,7 +102,7 @@ const MemoryCard = ({ index, lastClickedIndex }: MemoryCardProps) => {
     >
       <img
         src={
-          isClicked || isMatched
+          isClicked || isFirstCard
             ? stringindex
             : "https://www.crowdify.net/media/projects/6362/news/9877_detail.webp?m=1558343507"
         }

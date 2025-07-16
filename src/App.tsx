@@ -1,4 +1,5 @@
 import "./styles.css";
+import MemoryTable from "./components/MemoryTable"
 
 function App() {
   return (
@@ -10,7 +11,7 @@ function App() {
         <h1>Memory: The Game</h1>
       </header>
       <div className="App">
-        <p>Body, hi</p>
+        <MemoryTable initialColumns={6} initialRows={4} />
       </div>
       <footer>
         <p>Memory: The Game created by Lukas Traut</p>
