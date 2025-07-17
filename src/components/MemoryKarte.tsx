@@ -46,12 +46,16 @@ Cities.forEach((city, index) => {
 
 let lastClicked: { index: number; value: number; flipBack: () => void } | null = null;
 
+
 type MemoryCardProps = {
   index: number;
   lastClickedIndex: number;
+  onMatch: () => void;
+  onFail: () => void;
 };
 
-const MemoryCard = ({ index, lastClickedIndex }: MemoryCardProps) => {
+
+const MemoryCard = ({ index, lastClickedIndex, onMatch, onFail }: MemoryCardProps) => {
  const [isClicked, setIsClicked] = useState(false);
   const [isFirstCard, setIsFirstCard] = useState(false);
 
@@ -80,12 +84,14 @@ const MemoryCard = ({ index, lastClickedIndex }: MemoryCardProps) => {
         setTimeout(() => {
           alert("Its a Match");
           console.log("Its a Match");
+          onMatch()
           lastClicked = null;
         }, 500);
       } else {
         setTimeout(() => {
           alert("It's not a Match");
           console.log("It's not a Match");
+          onFail();
           setIsClicked(false);
           lastClicked?.flipBack();
           lastClicked = null;
